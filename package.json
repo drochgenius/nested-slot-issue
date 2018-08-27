@@ -23,5 +23,9 @@
     "devDependencies": {
         "polyserve": "^0.27.12",
         "typescript": "^3.0.1"
+    },
+    "dependencies": {
+        "@polymer/lit-element": "^0.5.2",
+        "lit-html": "^0.10.2"
     }
 }
