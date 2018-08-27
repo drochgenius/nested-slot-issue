@@ -14,8 +14,14 @@ export class SecondElement extends LitElement {
         return html`
             <style>h1 { color: red; font-size: 1rem; }</style>
             <h1>${banner}</h1>
-            <slot name="second"><slot>
+            <slot name="second" on-slotchange="${(e: Event) => this.onSlotChange(e)}"><slot>
         `;
+    }
+
+    private onSlotChange(e: Event){
+        e.stopPropagation();
+
+        console.log('second::slot changed', e.target);
     }
 }
 

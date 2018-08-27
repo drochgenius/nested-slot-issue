@@ -14,8 +14,15 @@ export class FirstElement extends LitElement {
         return html`
             <style>h1 { color: green; font-size: 1rem; }</style>
             <h1>${banner}</h1>
-            <slot name="first"><slot>
+            <slot name="first" on-slotchange="${(e: Event) => this.onSlotChange(e)}"><slot>
         `;
+    }
+
+
+    private onSlotChange(e: Event){
+        e.stopPropagation();
+        console.log('first::slot changed', e.target);
+
     }
 }
 
