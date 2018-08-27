@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Nested Slot Issue</title>
+    <script defer type="module" src="/dist/vanilla.js"></script>
+    <style>
+        body {
+            font-family: Roboto, arial, sans-serif;
+        }
+
+        h1 {
+            color: blue;
+            border-bottom: 1px solid blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Vanilla Shadow DOM and nested slots</h1>
+
+    <article id="example1">
+        <section slot="first">
+            <div slot="second">
+                <p>text 1</p>
+            </div>
+            <div slot="second">
+                <p>text <b>2</b></p>
+            </div>
+            <div slot="second">
+                <p>text <i>3</i></p>
+            </div>
+        </section>
+        <section slot="first">
+            <div slot="second">
+                <p>text 4</p>
+            </div>
+            <div slot="second">
+                <p>text5</p>
+                <p><strong>text 6</strong></p>
+            </div>
+        </section>
+        <section slot="first">
+            <div slot="second">
+                <p>text 7</p>
+            </div>
+        </section>
+    </article>
+
+    <h1>Polymer/Lit-Element Example</h1>
+
+    <first-element>
+        <second-element slot="first">
+            <div slot="second">
+                <p>text 1</p>
+            </div>
+            <div slot="second">
+                <p>text <b>2</b></p>
+            </div>
+            <div slot="second">
+                <p>text <i>3</i></p>
+            </div>
+        </second-element>
+        <second-element slot="first">
+            <div slot="second">
+                <p>text 4</p>
+            </div>
+            <div slot="second">
+                <p>text5</p>
+                <p><strong>text 6</strong></p>
+            </div>
+        </second-element>
+
+        <second-element slot="first">
+            <div slot="second">
+                <p>text 7</p>
+            </div>
+        </second-element>
+    </first-element>
+
+
+</body>
+
+</html>

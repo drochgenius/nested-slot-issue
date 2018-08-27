@@ -1,0 +1,27 @@
+{
+    "name": "nested-slot-issue",
+    "version": "1.0.0",
+    "description": "Minimal reproducible example of the nested slot issue",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "polyserve -o",
+        "watch": "tsc -p src -w",
+        "build": "tsc -p src"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/drochgenius/nested-slot-issue.git"
+    },
+    "keywords": [],
+    "author": "Dominique Rochefort <dominique.rochefort@hmhco.com>",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/drochgenius/nested-slot-issue/issues"
+    },
+    "homepage": "https://github.com/drochgenius/nested-slot-issue#readme",
+    "devDependencies": {
+        "polyserve": "^0.27.12",
+        "typescript": "^3.0.1"
+    }
+}
